@@ -1,0 +1,12 @@
+
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        title= "Пример Pug"
+        link(rel="stylesheet", href="css/main.css")
+    body
+    .main_block
+        .flex.main_flex
+            each name, link in {'index.html':'CSS', 'page1.html':'Синтаксис CSS', '#1':'Вставка CSS', '#2':'CSS текст', 'page2.html':'CSS шрифт', '#3':'Блоки'}
+                a(href=link) #{name}
+        block content
