@@ -81,3 +81,16 @@ p {
   -o-object-fit: cover;
   object-fit: cover;
 }
+.page_3 > img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin: 26px 6px 6px 6px;
+  max-width: 290px;
+}
+.c > img {
+  width: 10px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  flex: 1;
+  margin: 15px;
+}

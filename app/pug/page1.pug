@@ -1,7 +1,7 @@
 extends template
 
-mixin image(src)
-    img(src=src style="flex:1")
+mixin image(varb)
+    img(src=varb style="flex:1")
 
 block content
     .flex.page_1
@@ -10,8 +10,8 @@ block content
                 source(src="img/mmv.webm" type="video/webm")
 
         .flex(style="flex:1")
-            image('img/css1.jpg')
-            image('img/html.jpg')
+            +image('img/css1.jpg')
+            +image('img/html.jpg')
 
     .flex.page_1
         - var n = 0;
