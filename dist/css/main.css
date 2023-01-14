@@ -1,6 +1,6 @@
 body {
   background-color: #164b69;
-  font-family: Arial;
+  font-family: "Arial", serif;
   font-size: 14px;
 }
 .flex {
@@ -9,11 +9,12 @@ body {
   flex-wrap: wrap;
   align-content: center;
 }
-.main_block > .grid {
+.main_flex a {
   font-weight: bold;
-}
-a.active {
-  background-color: #dcdcdc;
+  font-size: 24px;
+  padding: 3px 5px;
+  border-radius: 3px;
+  transition: background-color linear 0.1s;
 }
 .right {
   float: right;
@@ -28,19 +29,15 @@ a.active {
 video {
   width: 100%;
 }
-.page_2 {
-  margin-top: 15px;
-}
-.page_2 > img {
-  min-width: 200px;
-  max-width: 303px;
-}
 .page_i > img,
 .page_2 > img {
   margin: 0 15px 15px 15px;
 }
-.main_flex {
-  font-weight: bold;
+@media screen and (max-width: 600px) {
+  .page_i > img,
+  .page_2 > img {
+    margin: 0 auto 15px auto;
+  }
 }
 i {
   word-spacing: 10px;
@@ -65,21 +62,44 @@ p {
   background-color: #e3e3e3;
   max-width: 860px;
 }
+.main_block a:hover {
+  background-color: #ccc;
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .main_block {
+    min-width: 520px;
+  }
+}
 @media screen and (max-width: 600px) {
   .main_block {
     width: 20vw;
     min-width: 500px;
   }
 }
-.page_1 > p,
-.page_1 > div {
+.page_1 p {
   margin: 15px;
 }
-.page_1 > div > img {
+.page_1 div {
+  margin: 15px;
+}
+.page_1 div img {
   margin-bottom: 15px;
-  height: 140;
+  height: 140px;
   -o-object-fit: cover;
   object-fit: cover;
+}
+@media screen and (max-width: 900px) {
+  .page_1:nth-child(3) {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 700px) {
+  .page_1 {
+    flex-direction: column;
+  }
+  .page_1 .flex {
+    flex-direction: column;
+  }
 }
 .page_3 > img {
   -o-object-fit: cover;
@@ -93,4 +113,16 @@ p {
   object-fit: cover;
   flex: 1;
   margin: 15px;
+}
+.page_2 {
+  margin-top: 15px;
+}
+.page_2 img {
+  min-width: 200px;
+  max-width: 303px;
+}
+@media screen and (max-width: 600px) {
+  .page_2 {
+    flex-direction: column;
+  }
 }

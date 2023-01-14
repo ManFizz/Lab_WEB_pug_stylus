@@ -9,11 +9,12 @@ body
   flex-wrap wrap;
   align-content center;
 
-.main_block > .grid
-  font-weight bold;
-
-a.active
-      background-color #DCDCDC;
+.main_flex a
+  font-weight  bold;
+  font-size 24px;
+  padding  3px 5px;
+  border-radius 3px;
+  transition background-color linear .1s;
 
 .right
   float right
@@ -25,18 +26,11 @@ a.active
 video
   width 100%;
 
-.page_2
-  margin-top 15px;
-
-.page_2 > img
-  min-width 200px;
-  max-width 303px;
 
 .page_i > img, .page_2 > img
   margin 0 15px 15px 15px;
-
-.main_flex
-  font-weight bold;
+  @media screen and (max-width 600px)
+    margin 0 auto 15px auto;
 
 i
   word-spacing 10px;
@@ -57,20 +51,33 @@ p
   padding 40px;
   background-color #E3E3E3;
   max-width 860px;
+
+  a:hover
+    background-color #CCC;
+
+  @media screen and (min-width 600px) and (max-width 800px)
+    min-width 520px;
+
   @media screen and (max-width 600px)
     width 100vw - 80px;
     min-width 500px;
 
-.flex.triple
-  set-grid-template-columns-three(170px)
-
-.page_1 > p, .page_1 > div
-  margin 15px;
-
-.page_1 > div > img
-  margin-bottom 15px;
-  height 140;
-  object-fit cover;
+.page_1
+  p
+    margin 15px;
+  div
+    margin 15px;
+    img
+      margin-bottom 15px;
+      height 140;
+      object-fit cover;
+  @media screen and (max-width 900px)
+    &:nth-child(3)
+      flex-direction column; 
+  @media screen and (max-width 700px)
+    flex-direction column; 
+    .flex
+      flex-direction column; 
 
 .page_3 > img
   object-fit cover;
@@ -82,3 +89,11 @@ p
   object-fit cover;
   flex 1;
   margin 15px;
+
+.page_2
+  margin-top 15px;
+  img
+    min-width 200px;
+    max-width 303px;
+  @media screen and (max-width 600px)
+    flex-direction column;

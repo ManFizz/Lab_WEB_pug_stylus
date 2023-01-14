@@ -3,6 +3,9 @@ extends template
 mixin image(varb)
     img(src=varb style="flex:1")
 
+block style 
+    style  .main_flex a:nth-child(2) { background-color: #CCC }
+
 block content
     .flex.page_1
         div(style="flex:2")

@@ -4,17 +4,16 @@
     <meta charset="utf-8"/>
     <title>Пример Pug</title>
     <link rel="stylesheet" href="css/main.css"/>
+    <style> .main_flex a:nth-child(5) { background-color: #CCC }</style>
   </head>
   <body></body>
   <div class="main_block">
-    <div class="flex main_flex"><a href="index.html">CSS</a><a href="page1.html">Синтаксис CSS</a><a href="#1">Вставка CSS</a><a href="#2">CSS текст</a><a href="page2.html">CSS шрифт</a><a href="#3">Блоки</a>
+    <div class="flex main_flex"><a href="index.html">CSS</a><a href="page1.html">Синтаксис CSS</a><a href="#">Вставка CSS</a><a href="#">CSS текст</a><a href="page2.html">CSS шрифт</a><a href="#">Блоки</a>
     </div>
-    <div class="flex page_2"><img src="img/css-probely.png"/><img src="img/css-text.png"/><img src="img/css-text-decoration.png"/></div>
+    <div class="flex page_2"><img alt="image" src="img/css-probely.png"/><img alt="image"  src="img/css-text.png"/><img alt="image"  src="img/css-text-decoration.png"/></div>
     <p>font - универсальное свойство, которое позволяет одновременно задать несколько характеристик шрифта и текста.
       <div>Синтаксис</div><i>font: [ font-style || font-variant || font-weight ] font-size [/line-height] font-family | inherit</i>
-    </p>
     <p>font-style - определяет начертание шрифта: обычное, курсивное или наклонное. Когда для текста установлено курсивное или наклонное начертание, браузер обращается к системе для поиска подходящего шрифта. Если заданный шрифт не найден, браузер использует специальный алгоритм для имитации нужного вида текста. Результат и качество при этом могут получиться неудовлетворительными, особенно при печати документа.
       <div>Синтаксис</div><i>font-style: normal | italic | oblique | inherit</i>
-    </p>
   </div>
 </html>
